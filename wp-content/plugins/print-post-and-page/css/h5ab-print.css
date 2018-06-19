@@ -38,3 +38,5 @@ float: right;
 font-size: 10px;
 color:#FF0000;
 }
+
+@page { margin:.40in; }

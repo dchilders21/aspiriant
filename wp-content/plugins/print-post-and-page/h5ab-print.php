@@ -69,7 +69,7 @@
 				public function load_scripts() {
 
 					wp_enqueue_style('h5ab-print-font-awesome', H5AB_PRINT_PLUGIN_URL . 'css/font-awesome.min.css');
-                    wp_enqueue_style('h5ab-print-css', H5AB_PRINT_PLUGIN_URL . 'css/h5ab-print.min.css');
+                    wp_enqueue_style('h5ab-print-css', H5AB_PRINT_PLUGIN_URL . 'css/h5ab-print.css');
 
                     wp_enqueue_script('h5ab-print-js', H5AB_PRINT_PLUGIN_URL . 'js/h5ab-print.min.js', array('jquery'), '', true);
 
