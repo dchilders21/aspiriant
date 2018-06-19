@@ -1,0 +1,110 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 15.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Pacific Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20170517T213737Z
+DESCRIPTION:Achieving more is truly a partnership. As the team at Aspiriant
+	 works with you to reach your goals\, your trust and support help us to re
+	alize ours. We’d be delighted to thank you for being such a wonderful cl
+	ient and helping our company to grow.\nWe will also be honoring one of our
+	 founders\, Linda Fitz\, who has succeeded in achieving her career goals a
+	nd now moves on to further support her favorite charities.\nPlease join us
+	 for a special celebration at the Green Room in San Francisco’s War Memo
+	rial & Performing Arts Center.	\n 	\nThursday\, July 13\n6 p.m. – 9:30 p
+	.m.\nThe Green Room at the Veterans Building\nThe Veteran’s Building is 
+	located at 401 Van Ness Avenue\, San Francisco\n\nFor questions\, please c
+	ontact Todd Snook \n415.371.7800\nevents@aspiriant.com <mailto:events@aspi
+	riant.com?subject=Client%20Appreciation%20Event%20at%20The%20Green%20Room>
+	 \n\n	\n\n
+DTEND;TZID="Pacific Standard Time":20170713T213000
+DTSTAMP:20170517T213737Z
+DTSTART;TZID="Pacific Standard Time":20170713T180000
+LAST-MODIFIED:20170517T213737Z
+LOCATION:Green Room at 401 Van Ness Ave. San Francisco
+PRIORITY:5
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-us:Aspiriant Client Appreciation Event at the Green Roo
+	m 
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000B06EBF1D1ACFD201000000000000000
+	010000000AE2C71A5F6E1DE42A356AE69AAC91BB7
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion rmj.rmm.rup.rpr">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted 
+	from text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-us"></SPAN><SPAN LAN
+	G="en-us"></SPAN><SPAN LANG="en-us"><FONT COLOR="#FFFFFF" FACE="Georgia">A
+	</FONT></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LA
+	NG="en-us"><FONT COLOR="#FFFFFF" FACE="Georgia">chieving more is truly a p
+	artnership. As the team at Aspiriant works with you to reach your goals\, 
+	your trust and support help us to realize ours. We’d be delighted to tha
+	nk you for being such a wonderful client and helping our company to grow.<
+	/FONT></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-us"><FONT COLOR="#FFFFFF" F
+	ACE="Georgia">We will also be honoring one of our founders\, Linda Fitz\, 
+	who has succeeded in achieving her career goals and now moves on to furthe
+	r support her favorite charities.</FONT></SPAN></P>\n\n<P DIR=LTR><SPAN LA
+	NG="en-us"><FONT COLOR="#FFFFFF" FACE="Georgia">Please join us for a speci
+	al celebration at the Green Room in San Francisco’s War Memorial &amp\; 
+	Performing Arts Center.&nbsp\;&nbsp\;&nbsp\;</FONT></SPAN><SPAN LANG="en-u
+	s"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"><BR>\n</SPAN><SPAN 
+	LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><S
+	PAN LANG="en-us"><FONT COLOR="#FFFFFF" FACE="Georgia"></FONT></SPAN><SPAN 
+	LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us">&nbsp\;&n
+	bsp\;&nbsp\;&nbsp\;&nbsp\;&nbsp\;&nbsp\;</SPAN><SPAN LANG="en-us"></SPAN><
+	SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SP
+	AN><SPAN LANG="en-us"><BR>\n</SPAN><SPAN LANG="en-us"><B></B></SPAN><SPAN 
+	LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B><FONT COLOR="#FFFFFF" SIZ
+	E=4 FACE="Georgia">Thursday\, July 13<BR>\n6 p.m. – 9:30 p.m.</FONT></B>
+	</SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-
+	us"></SPAN></P>\n\n<P DIR=LTR ALIGN=CENTER><SPAN LANG="en-us"><B></B></SPA
+	N><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B><FONT COLOR="#FFF
+	FFF" SIZE=4 FACE="Georgia">The Green Room at the Veterans Building<BR>\n</
+	FONT></B></SPAN><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B></B
+	></SPAN><SPAN LANG="en-us"><B><FONT COLOR="#FFFFFF" SIZE=2 FACE="Georgia">
+	The Veteran’s Building is located at 401 Van Ness Avenue\, San Francisco
+	</FONT></B></SPAN><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B><
+	/B></SPAN><SPAN LANG="en-us"><B></B></SPAN></P>\n\n<P DIR=LTR ALIGN=CENTER
+	><SPAN LANG="en-us"><B><FONT COLOR="#FFFFFF" SIZE=2 FACE="Georgia">For que
+	stions\, please contact Todd Snook<BR>\n</FONT></B></SPAN><SPAN LANG="en-u
+	s"><B></B></SPAN><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B><F
+	ONT COLOR="#FFFFFF" SIZE=2 FACE="Georgia">415.371.7800<BR>\n</FONT></B></S
+	PAN><SPAN LANG="en-us"></SPAN><A HREF="mailto:events@aspiriant.com?subject
+	=Client%20Appreciation%20Event%20at%20The%20Green%20Room"><SPAN LANG="en-u
+	s"><B></B></SPAN><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B><U
+	><FONT COLOR="#FFFFFF" SIZE=2 FACE="Georgia">events@aspiriant.com</FONT></
+	U></B></SPAN><SPAN LANG="en-us"></SPAN></A><SPAN LANG="en-us"><B></B></SPA
+	N><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B></B></SPAN></P>\n
+	\n<P DIR=LTR><SPAN LANG="en-us"><B></B></SPAN><SPAN LANG="en-us"><B></B></
+	SPAN><SPAN LANG="en-us"><B>&nbsp\;&nbsp\;&nbsp\;&nbsp\;&nbsp\;&nbsp\;&nbsp
+	\;</B></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN><SPAN LAN
+	G="en-us"><BR>\n</SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN
+	><SPAN LANG="en-us"></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MS-OLK-CONFTYPE:0
+BEGIN:VALARM
+TRIGGER:-PT1440M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

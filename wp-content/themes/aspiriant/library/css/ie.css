@@ -1,0 +1,1230 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+*/
+/* import mixins */
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* line 23, ../scss/_mixins.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 25, ../scss/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 26, ../scss/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*********************
+TOOLS
+*********************/
+/* line 34, ../scss/_mixins.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 41, ../scss/_mixins.scss */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* using @import "webfonts" to pull in custom webfonts -ewee */
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 175, ../scss/_mixins.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 176, ../scss/_mixins.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 177, ../scss/_mixins.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 179, ../scss/_mixins.scss */
+.alignright {
+  float: right;
+}
+
+/* line 180, ../scss/_mixins.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 184, ../scss/_mixins.scss */
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+/* line 190, ../scss/_mixins.scss */
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+/* line 196, ../scss/_mixins.scss */
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+/* line 202, ../scss/_mixins.scss */
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+/* line 208, ../scss/_mixins.scss */
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BUTTONS
+*********************/
+/* line 270, ../scss/_mixins.scss */
+.button, .button:visited {
+  font-family: "Frutiger-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border: 1px solid #78370e;
+  border-top-color: #934311;
+  border-left-color: #934311;
+  padding: 4px 12px;
+  color: #fff;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  border-radius: 4px;
+  background-color: #9c4812;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b35215), to(#9c4812));
+  background-image: -webkit-linear-gradient(top, #b35215, #9c4812);
+  background-image: -moz-linear-gradient(top, #b35215, #9c4812);
+  background-image: -o-linear-gradient(top, #b35215, #9c4812);
+  background-image: linear-gradient(to bottom, #b35215, #9c4812);
+}
+/* line 289, ../scss/_mixins.scss */
+.button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+  color: #fff;
+  border: 1px solid #78370e;
+  border-top-color: #58280a;
+  border-left-color: #58280a;
+  background-color: #853d10;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9c4812), to(#853d10));
+  background-image: -webkit-linear-gradient(top, #9c4812, #853d10);
+  background-image: -moz-linear-gradient(top, #9c4812, #853d10);
+  background-image: -o-linear-gradient(top, #9c4812, #853d10);
+  background-image: linear-gradient(to bottom, #9c4812, #853d10);
+}
+/* line 297, ../scss/_mixins.scss */
+.button:active, .button:visited:active {
+  background-color: #b35215;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9c4812), to(#b35215));
+  background-image: -webkit-linear-gradient(top, #9c4812, #b35215);
+  background-image: -moz-linear-gradient(top, #9c4812, #b35215);
+  background-image: -o-linear-gradient(top, #9c4812, #b35215);
+  background-image: linear-gradient(to bottom, #9c4812, #b35215);
+}
+
+/* line 302, ../scss/_mixins.scss */
+.blue-button, .blue-button:visited {
+  border-color: #1a2f43;
+  text-shadow: 0 1px 1px #1a2f43;
+  background-color: #223c55;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#294967), to(#223c55));
+  background-image: -webkit-linear-gradient(top, #294967, #223c55);
+  background-image: -moz-linear-gradient(top, #294967, #223c55);
+  background-image: -o-linear-gradient(top, #294967, #223c55);
+  background-image: linear-gradient(to bottom, #294967, #223c55);
+  box-shadow: inset 0 0 3px #4072a1;
+}
+/* line 308, ../scss/_mixins.scss */
+.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
+  border-color: #132230;
+  background-color: #1a2f43;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#233f58), to(#1a2f43));
+  background-image: -webkit-linear-gradient(top, #233f58, #1a2f43);
+  background-image: -moz-linear-gradient(top, #233f58, #1a2f43);
+  background-image: -o-linear-gradient(top, #233f58, #1a2f43);
+  background-image: linear-gradient(to bottom, #233f58, #1a2f43);
+}
+/* line 312, ../scss/_mixins.scss */
+.blue-button:active, .blue-button:visited:active {
+  background-color: #294967;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#223c55), to(#294967));
+  background-image: -webkit-linear-gradient(top, #223c55, #294967);
+  background-image: -moz-linear-gradient(top, #223c55, #294967);
+  background-image: -o-linear-gradient(top, #223c55, #294967);
+  background-image: linear-gradient(to bottom, #223c55, #294967);
+}
+
+/******************************************************************
+Site Name: Aspiriant
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+/* line 24, ../scss/_grid.scss */
+.onecol {
+  width: 5.801104972%;
+}
+
+/* 4.85%;  } /* grid_1  */
+/* line 25, ../scss/_grid.scss */
+.twocol {
+  width: 14.364640883%;
+}
+
+/* 13.45%; } /* grid_2  */
+/* line 26, ../scss/_grid.scss */
+.threecol {
+  width: 22.928176794%;
+}
+
+/* 22.05%; } /* grid_3  */
+/* line 27, ../scss/_grid.scss */
+.fourcol {
+  width: 31.491712705%;
+}
+
+/* 30.75%; } /* grid_4  */
+/* line 28, ../scss/_grid.scss */
+.fivecol {
+  width: 40.055248616%;
+}
+
+/* 39.45%; } /* grid_5  */
+/* line 29, ../scss/_grid.scss */
+.sixcol {
+  width: 48.618784527%;
+}
+
+/* 48%;    } /* grid_6  */
+/* line 30, ../scss/_grid.scss */
+.sevencol {
+  width: 57.182320438000005%;
+}
+
+/* 56.75%; } /* grid_7  */
+/* line 31, ../scss/_grid.scss */
+.eightcol {
+  width: 65.74585634900001%;
+}
+
+/* 65.4%;  } /* grid_8  */
+/* line 32, ../scss/_grid.scss */
+.ninecol {
+  width: 74.30939226%;
+}
+
+/* 74.05%; } /* grid_9  */
+/* line 33, ../scss/_grid.scss */
+.tencol {
+  width: 82.87292817100001%;
+}
+
+/* 82.7%;  } /* grid_10 */
+/* line 34, ../scss/_grid.scss */
+.elevencol {
+  width: 91.436464082%;
+}
+
+/* 91.35%; } /* grid_11 */
+/* line 35, ../scss/_grid.scss */
+.twelvecol {
+  width: 96%;
+}
+
+/* 100%;   } /* grid_12 */
+/* line 39, ../scss/_grid.scss */
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+}
+
+/* line 45, ../scss/_grid.scss */
+.twelvecol {
+  float: none;
+  margin: 0 2%;
+}
+
+/* line 50, ../scss/_grid.scss */
+.tencol {
+  float: none;
+  margin: 0 8.65%;
+}
+
+/* line 55, ../scss/_grid.scss */
+.eightcol {
+  float: left;
+  margin: 0;
+}
+
+/* line 59, ../scss/_grid.scss */
+.eightcol-center {
+  float: none;
+  margin: 0 17.3%;
+}
+
+/* line 64, ../scss/_grid.scss */
+.sixcol-center {
+  float: none;
+  margin: 0 26%;
+}
+
+/* line 69, ../scss/_grid.scss */
+.threecol {
+  margin-left: 0;
+  margin-right: 6%;
+}
+
+/* line 73, ../scss/_grid.scss */
+.threecol.push-right {
+  margin-left: 2.762430939%;
+  margin-right: 0;
+}
+
+/* line 78, ../scss/_grid.scss */
+.first {
+  margin-left: 0;
+}
+
+/* line 82, ../scss/_grid.scss */
+.last {
+  float: right;
+}
+
+/* line 86, ../scss/_grid.scss */
+.push-onecol {
+  margin-left: 0;
+  padding-left: 5.801104972%;
+}
+
+/* line 90, ../scss/_grid.scss */
+.push-twocol {
+  margin-left: 0;
+  padding-left: 14.364640883%;
+}
+
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/* line 22, ../scss/_481up.scss */
+.small-scrn {
+  display: none;
+}
+
+/* line 25, ../scss/_481up.scss */
+.medium-scrn {
+  display: block;
+}
+
+/* line 28, ../scss/_481up.scss */
+.large-scrn {
+  display: none;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 42, ../scss/_481up.scss */
+.nav, .top-nav, .secondary-nav, .tertiary-nav, .footer-nav {
+  float: left;
+}
+
+/* .menu is clearfixed inside mixins.scss */
+/* line 49, ../scss/_481up.scss */
+.menu {
+  /* end .menu ul */
+}
+/* line 50, ../scss/_481up.scss */
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 51, ../scss/_481up.scss */
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+/* line 52, ../scss/_481up.scss */
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+/* line 97, ../scss/_481up.scss */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+/* line 101, ../scss/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 106, ../scss/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 111, ../scss/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/* line 120, ../scss/_481up.scss */
+.the-client-experience {
+  /* client experience page */
+}
+/* line 121, ../scss/_481up.scss */
+.the-client-experience .featured-image {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 126, ../scss/_481up.scss */
+.the-client-experience .experience1, .the-client-experience .experience2, .the-client-experience .experience3, .the-client-experience .experience4, .the-client-experience .experience5 {
+  clear: both;
+  position: relative;
+  top: 1em;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/*********************
+FATHOM STYLES
+*********************/
+/* line 157, ../scss/_481up.scss */
+.single-fathom table, .archive.fathom table, .archive.tag.fathom table, .fathom table {
+  margin: 1rem 0 2rem;
+  width: 100%;
+}
+/* line 160, ../scss/_481up.scss */
+.single-fathom table tr, .archive.fathom table tr, .archive.tag.fathom table tr, .fathom table tr {
+  border-bottom: 1px solid #6e889b;
+}
+/* line 162, ../scss/_481up.scss */
+.single-fathom table tr:first-of-type, .archive.fathom table tr:first-of-type, .archive.tag.fathom table tr:first-of-type, .fathom table tr:first-of-type {
+  border-bottom: 2px solid #6e889b;
+}
+/* line 166, ../scss/_481up.scss */
+.single-fathom table td, .single-fathom table th, .archive.fathom table td, .archive.fathom table th, .archive.tag.fathom table td, .archive.tag.fathom table th, .fathom table td, .fathom table th {
+  color: #325773;
+  padding: 0.5rem;
+  text-align: center;
+  vertical-align: top;
+}
+/* line 171, ../scss/_481up.scss */
+.single-fathom table td:first-of-type, .single-fathom table th:first-of-type, .archive.fathom table td:first-of-type, .archive.fathom table th:first-of-type, .archive.tag.fathom table td:first-of-type, .archive.tag.fathom table th:first-of-type, .fathom table td:first-of-type, .fathom table th:first-of-type {
+  text-align: left;
+}
+/* line 175, ../scss/_481up.scss */
+.single-fathom table td, .archive.fathom table td, .archive.tag.fathom table td, .fathom table td {
+  font-family: "MullerLight", "Frutiger-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+/* line 179, ../scss/_481up.scss */
+.single-fathom table th, .archive.fathom table th, .archive.tag.fathom table th, .fathom table th {
+  font-family: "MullerBold", "Frutiger-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/* line 22, ../scss/_768up.scss */
+.small-scrn {
+  display: none;
+}
+
+/* line 25, ../scss/_768up.scss */
+.medium-scrn {
+  display: none;
+}
+
+/* line 28, ../scss/_768up.scss */
+.large-scrn {
+  display: block;
+}
+
+/* line 37, ../scss/_768up.scss */
+.bio-grid {
+  display: block;
+  height: 260px;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 46, ../scss/_768up.scss */
+.wrap, #content
+ {
+  max-width: 1140px;
+}
+
+/* line 57, ../scss/_768up.scss */
+#main {
+  margin: 1em 0 0 0;
+}
+
+/* line 62, ../scss/_768up.scss */
+.attachment-full.wp-post-image, .archive-title + img, .article-header + img {
+  max-width: 100%;
+  /* Constrains hero image width */
+  height: auto;
+}
+
+/* line 66, ../scss/_768up.scss */
+.single-bio .attachment-full.wp-post-image {
+  max-width: 675px;
+  /* Constrains bio image width */
+  height: auto;
+}
+
+/* line 72, ../scss/_768up.scss */
+.mobile {
+  display: none;
+}
+
+/* line 76, ../scss/_768up.scss */
+.page-template-page-location-php .threecol {
+  display: block;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 86, ../scss/_768up.scss */
+.header #logo {
+  position: relative;
+}
+/* line 94, ../scss/_768up.scss */
+.header .client-login {
+  font-size: 0.8em;
+  padding: 10px;
+  margin-bottom: 3em;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 105, ../scss/_768up.scss */
+nav {
+  float: right;
+}
+
+/* line 109, ../scss/_768up.scss */
+.nav, .top-nav, .secondary-nav, .tertiary-nav, .footer-nav {
+  float: right;
+}
+
+/* line 114, ../scss/_768up.scss */
+.nav, .top-nav, .secondary-nav, .tertiary-nav {
+  /* end .menu ul li */
+  /* highlight current page */
+}
+/* line 116, ../scss/_768up.scss */
+.nav li, .top-nav li, .secondary-nav li, .tertiary-nav li {
+  font-size: 0.9em;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+/* line 119, ../scss/_768up.scss */
+.nav li a, .top-nav li a, .secondary-nav li a, .tertiary-nav li a {
+  border-bottom: 0;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+/* line 136, ../scss/_768up.scss */
+.nav li ul.sub-menu,
+.nav li ul.children, .top-nav li ul.sub-menu,
+.top-nav li ul.children, .secondary-nav li ul.sub-menu,
+.secondary-nav li ul.children, .tertiary-nav li ul.sub-menu,
+.tertiary-nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+/* line 145, ../scss/_768up.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li, .top-nav li ul.sub-menu li,
+.top-nav li ul.children li, .secondary-nav li ul.sub-menu li,
+.secondary-nav li ul.children li, .tertiary-nav li ul.sub-menu li,
+.tertiary-nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+/* line 147, ../scss/_768up.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a, .top-nav li ul.sub-menu li a,
+.top-nav li ul.children li a, .secondary-nav li ul.sub-menu li a,
+.secondary-nav li ul.children li a, .tertiary-nav li ul.sub-menu li a,
+.tertiary-nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 164, ../scss/_768up.scss */
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a, .top-nav li ul.sub-menu li:last-child a,
+.top-nav li ul.children li:last-child a, .secondary-nav li ul.sub-menu li:last-child a,
+.secondary-nav li ul.children li:last-child a, .tertiary-nav li ul.sub-menu li:last-child a,
+.tertiary-nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+
+/* line 202, ../scss/_768up.scss */
+#menu-footer-links {
+  margin: 32px 0 0;
+}
+/* line 204, ../scss/_768up.scss */
+#menu-footer-links .divider {
+  margin-left: 10px;
+}
+
+/* line 209, ../scss/_768up.scss */
+.secondary-nav li a, .tertiary-nav li a, .footer-nav li a {
+  /* overwrites .nav */
+  padding: 0 0.6em 0 0;
+}
+
+/* line 217, ../scss/_768up.scss */
+nav #everything-else {
+  float: right;
+}
+
+/* line 222, ../scss/_768up.scss */
+.nav.top-nav {
+  margin: 0 0 1em 0;
+}
+/* line 226, ../scss/_768up.scss */
+.nav.top-nav li a {
+  text-transform: uppercase;
+}
+
+/* line 233, ../scss/_768up.scss */
+.secondary-nav {
+  margin-bottom: .25em;
+}
+
+/* line 236, ../scss/_768up.scss */
+.tertiary-nav {
+  clear: both;
+  margin-top: 0;
+}
+
+/* line 241, ../scss/_768up.scss */
+.menu-by-office-container {
+  clear: both;
+}
+
+/* line 245, ../scss/_768up.scss */
+.by-office {
+  cursor: pointer;
+}
+/* line 247, ../scss/_768up.scss */
+.by-office:after {
+  content: "   ▼";
+}
+
+/* line 252, ../scss/_768up.scss */
+#menu-our-exceptional-people .active-trail .by-office:after, #menu-our-exceptional-people li:active .by-office:after {
+  color: #294967;
+  content: "   ▲";
+}
+
+/* link color overrides */
+/* line 258, ../scss/_768up.scss */
+.secondary-nav a, .secondary-nav a:visited,
+.client-login a, .client-login a:visited, .tertiary-nav a, .tertiary-nav a:visited {
+  /*color: $link-nav2;*/
+  /* on hover */
+  /* on click */
+}
+/* line 263, ../scss/_768up.scss */
+.secondary-nav a:hover, .secondary-nav a:focus, .secondary-nav a:visited:hover, .secondary-nav a:visited:focus,
+.client-login a:hover,
+.client-login a:focus, .client-login a:visited:hover, .client-login a:visited:focus, .tertiary-nav a:hover, .tertiary-nav a:focus, .tertiary-nav a:visited:hover, .tertiary-nav a:visited:focus {
+  color: dimgray;
+}
+/* line 268, ../scss/_768up.scss */
+.secondary-nav a:active, .secondary-nav a:visited:active,
+.client-login a:active, .client-login a:visited:active, .tertiary-nav a:active, .tertiary-nav a:visited:active {
+  color: dimgray;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 277, ../scss/_768up.scss */
+.sidebar {
+  margin-top: 1.25em;
+  padding: 1em;
+  margin-left: 5em;
+  width: 122%;
+}
+
+/* line 284, ../scss/_768up.scss */
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+
+/* line 289, ../scss/_768up.scss */
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+/* line 294, ../scss/_768up.scss */
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+/* line 302, ../scss/_768up.scss */
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* line 310, ../scss/_768up.scss */
+.threecol.sidebar-container {
+  margin-right: 0;
+  margin-top: 0;
+  width: 22%;
+}
+
+/* line 317, ../scss/_768up.scss */
+#sidebar1 .read-more {
+  padding-bottom: 20px;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/********************
+PAGE SPECIFIC and
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+/* line 417, ../scss/_768up.scss */
+.home {
+  /* home page */
+}
+/* line 418, ../scss/_768up.scss */
+.home .featured {
+  /* featured news item on home page */
+  margin: 30px auto;
+}
+/* line 420, ../scss/_768up.scss */
+.home .featured h1, .home .featured .h3, .home .featured p {
+  font-size: 18px;
+  font-family: "Frutiger-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.33em;
+  margin: 0;
+}
+/* line 426, ../scss/_768up.scss */
+.home .featured h1, .home .featured .h3 {
+  padding-top: 10px;
+}
+/* line 429, ../scss/_768up.scss */
+.home .featured img {
+  float: left;
+  margin-right: 20px;
+}
+/* line 434, ../scss/_768up.scss */
+.home .feature-section {
+  border-top: 2px solid #A1B5C1;
+}
+
+/* line 440, ../scss/_768up.scss */
+.the-client-experience {
+  /* client experience page */
+}
+/* line 441, ../scss/_768up.scss */
+.the-client-experience .featured-image {
+  float: left;
+}
+/* line 444, ../scss/_768up.scss */
+.the-client-experience .experience1, .the-client-experience .experience2, .the-client-experience .experience3, .the-client-experience .experience4, .the-client-experience .experience5 {
+  float: left;
+  margin-left: 360px;
+  position: relative;
+  top: -25em;
+  width: 17em;
+}
+/* line 451, ../scss/_768up.scss */
+.the-client-experience .footer {
+  top: -25em;
+}
+
+/* line 460, ../scss/_768up.scss */
+.single-bio #bio ul {
+  margin-top: 0;
+}
+/* line 463, ../scss/_768up.scss */
+.single-bio .sidebar#sidebar1 {
+  margin-top: 28em;
+}
+
+/* line 468, ../scss/_768up.scss */
+.bio-grid.threecol {
+  width: 25%;
+}
+
+/* for the news and intel section */
+/* line 480, ../scss/_768up.scss */
+.intel-text {
+  margin-left: 230px;
+}
+
+/* line 483, ../scss/_768up.scss */
+.parent-pageid-27 article img {
+  max-width: 170px;
+  height: auto;
+}
+
+/* line 489, ../scss/_768up.scss */
+.start-dialogue .sidebar {
+  margin-top: 21em;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 504, ../scss/_768up.scss */
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/*********************
+FATHOM STYLES
+*********************/
+/* line 524, ../scss/_768up.scss */
+.single-fathom .header #inner-header, .archive.fathom .header #inner-header, .archive.tag.fathom .header #inner-header, .fathom .header #inner-header {
+  margin: 0 auto;
+}
+/* line 528, ../scss/_768up.scss */
+.single-fathom .header #hamburger, .archive.fathom .header #hamburger, .archive.tag.fathom .header #hamburger, .fathom .header #hamburger {
+  top: 0;
+}
+/* line 541, ../scss/_768up.scss */
+.single-fathom .wrap, .single-fathom #content, .archive.fathom .wrap, .archive.fathom #content, .archive.tag.fathom .wrap, .archive.tag.fathom #content, .fathom .wrap, .fathom #content {
+  max-width: 1280px;
+}
+/* line 545, ../scss/_768up.scss */
+.single-fathom #main, .archive.fathom #main, .archive.tag.fathom #main, .fathom #main {
+  border: none;
+  margin: 1rem 0 0;
+  position: relative;
+  max-width: 100%;
+  min-height: 25rem;
+}
+/* line 553, ../scss/_768up.scss */
+.single-fathom #fathom-sidebar, .archive.fathom #fathom-sidebar, .archive.tag.fathom #fathom-sidebar, .fathom #fathom-sidebar {
+  top: 32rem;
+}
+/* line 555, ../scss/_768up.scss */
+.single-fathom #fathom-sidebar.insight-sidebar, .archive.fathom #fathom-sidebar.insight-sidebar, .archive.tag.fathom #fathom-sidebar.insight-sidebar, .fathom #fathom-sidebar.insight-sidebar {
+  top: 32rem;
+}
+/* line 557, ../scss/_768up.scss */
+.single-fathom #fathom-sidebar.insight-sidebar .fa-2x, .archive.fathom #fathom-sidebar.insight-sidebar .fa-2x, .archive.tag.fathom #fathom-sidebar.insight-sidebar .fa-2x, .fathom #fathom-sidebar.insight-sidebar .fa-2x {
+  font-size: 1.8rem;
+}
+/* line 561, ../scss/_768up.scss */
+.single-fathom #fathom-sidebar .sidebar-insight-contents, .archive.fathom #fathom-sidebar .sidebar-insight-contents, .archive.tag.fathom #fathom-sidebar .sidebar-insight-contents, .fathom #fathom-sidebar .sidebar-insight-contents {
+  display: block;
+}
+/* line 566, ../scss/_768up.scss */
+.single-fathom #follow-links, .single-fathom #share-links, .archive.fathom #follow-links, .archive.fathom #share-links, .archive.tag.fathom #follow-links, .archive.tag.fathom #share-links, .fathom #follow-links, .fathom #share-links {
+  max-width: 2rem;
+}
+/* line 568, ../scss/_768up.scss */
+.single-fathom #follow-links .fa-2x, .single-fathom #share-links .fa-2x, .archive.fathom #follow-links .fa-2x, .archive.fathom #share-links .fa-2x, .archive.tag.fathom #follow-links .fa-2x, .archive.tag.fathom #share-links .fa-2x, .fathom #follow-links .fa-2x, .fathom #share-links .fa-2x {
+  font-size: 1.8rem;
+  padding-bottom: 0.25rem;
+}
+/* line 573, ../scss/_768up.scss */
+.single-fathom #follow-links, .archive.fathom #follow-links, .archive.tag.fathom #follow-links, .fathom #follow-links {
+  right: 5rem;
+  top: 17rem;
+}
+/* line 578, ../scss/_768up.scss */
+.single-fathom #share-links, .archive.fathom #share-links, .archive.tag.fathom #share-links, .fathom #share-links {
+  margin-left: 0.5rem;
+  padding-bottom: 0;
+}
+/* line 583, ../scss/_768up.scss */
+.single-fathom .blog_author, .archive.fathom .blog_author, .archive.tag.fathom .blog_author, .fathom .blog_author {
+  margin: 0 1rem 0 0;
+}
+/* line 595, ../scss/_768up.scss */
+.single-fathom .fathom-news-intel .fathom-news-snippet, .archive.fathom .fathom-news-intel .fathom-news-snippet, .archive.tag.fathom .fathom-news-intel .fathom-news-snippet, .fathom .fathom-news-intel .fathom-news-snippet {
+  border-right: 1px solid #6e889b;
+  border-bottom: none;
+  clear: none;
+  margin: 0 3% 1.5rem 0;
+  min-height: 15rem;
+  padding: 0 3% 0 0;
+  width: 30%;
+}
+/* line 603, ../scss/_768up.scss */
+.single-fathom .fathom-news-intel .fathom-news-snippet:last-of-type, .archive.fathom .fathom-news-intel .fathom-news-snippet:last-of-type, .archive.tag.fathom .fathom-news-intel .fathom-news-snippet:last-of-type, .fathom .fathom-news-intel .fathom-news-snippet:last-of-type {
+  border-right: none;
+}
+/* line 606, ../scss/_768up.scss */
+.single-fathom .fathom-news-intel .fathom-news-snippet .news-intel-logo, .archive.fathom .fathom-news-intel .fathom-news-snippet .news-intel-logo, .archive.tag.fathom .fathom-news-intel .fathom-news-snippet .news-intel-logo, .fathom .fathom-news-intel .fathom-news-snippet .news-intel-logo {
+  bottom: 0;
+  max-width: 85%;
+  padding-top: 1.5rem;
+  position: absolute;
+  right: 1rem;
+}
+/* line 617, ../scss/_768up.scss */
+.single-fathom .insight_newsletter_modal, .archive.fathom .insight_newsletter_modal, .archive.tag.fathom .insight_newsletter_modal, .fathom .insight_newsletter_modal {
+  height: auto;
+  margin: 0px;
+  max-width: 25rem;
+  padding: 0px;
+  width: auto;
+}
+/* line 624, ../scss/_768up.scss */
+.single-fathom .insight_newsletter_modal .insight_newsletter_container, .archive.fathom .insight_newsletter_modal .insight_newsletter_container, .archive.tag.fathom .insight_newsletter_modal .insight_newsletter_container, .fathom .insight_newsletter_modal .insight_newsletter_container {
+  margin: 0;
+}
+/* line 627, ../scss/_768up.scss */
+.single-fathom .insight_newsletter_signup, .archive.fathom .insight_newsletter_signup, .archive.tag.fathom .insight_newsletter_signup, .fathom .insight_newsletter_signup {
+  margin: 1rem 0 2rem 0.5rem;
+}
+/* line 629, ../scss/_768up.scss */
+.single-fathom .insight_newsletter_signup .insight-icon, .archive.fathom .insight_newsletter_signup .insight-icon, .archive.tag.fathom .insight_newsletter_signup .insight-icon, .fathom .insight_newsletter_signup .insight-icon {
+  float: left;
+  margin: -0.5rem 0.5rem 1rem 0;
+}
+/* line 633, ../scss/_768up.scss */
+.single-fathom .insight_newsletter_signup .insight-modal-link, .archive.fathom .insight_newsletter_signup .insight-modal-link, .archive.tag.fathom .insight_newsletter_signup .insight-modal-link, .fathom .insight_newsletter_signup .insight-modal-link {
+  clear: left;
+  float: left;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+/* line 641, ../scss/_768up.scss */
+.single-fathom .close-modal, .archive.fathom .close-modal, .archive.tag.fathom .close-modal, .fathom .close-modal {
+  z-index: 1;
+}
+
+/* line 649, ../scss/_768up.scss */
+.archive.fathom #main {
+  top: -5rem;
+}
+/* line 654, ../scss/_768up.scss */
+.archive.fathom .post-container:nth-last-of-type(2):nth-child(even), .archive.fathom .post-container:last-of-type {
+  border-bottom: none;
+}
+
+/* line 662, ../scss/_768up.scss */
+.archive.fathom #main {
+  top: 0;
+}
+
+/* line 668, ../scss/_768up.scss */
+.archive.fathom .post-container.sticky-post, .archive.fathom .post-container:first-of-type {
+  min-height: 12rem;
+  width: 84%;
+}
+/* line 671, ../scss/_768up.scss */
+.archive.fathom .post-container.sticky-post img, .archive.fathom .post-container:first-of-type img {
+  max-width: 48%;
+  margin: 0 3% 3% 0;
+}
+/* line 675, ../scss/_768up.scss */
+.archive.fathom .post-container.sticky-post:first-of-type, .archive.fathom .post-container:first-of-type:first-of-type {
+  border-bottom: 1px solid #6e889b;
+}
+
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/* line 12, ../scss/_1030up.scss */
+.the-client-experience {
+  /* client experience page */
+}
+/* line 14, ../scss/_1030up.scss */
+.the-client-experience .featured-image {
+  float: left;
+  position: absolute;
+  left: 310px;
+  top: -60px;
+}
+/* line 19, ../scss/_1030up.scss */
+.the-client-experience .featured-image .tagline {
+  margin: 0 auto;
+  position: relative;
+  width: 200px;
+}
+/* line 25, ../scss/_1030up.scss */
+.the-client-experience .experience1, .the-client-experience .experience2, .the-client-experience .experience3, .the-client-experience .experience4, .the-client-experience .experience5 {
+  float: none;
+  margin-left: 0;
+  position: relative;
+  top: 0;
+}
+/* line 31, ../scss/_1030up.scss */
+.the-client-experience .experience1 {
+  padding-top: 0;
+}
+/* line 34, ../scss/_1030up.scss */
+.the-client-experience .experience2 {
+  padding-top: 3em;
+}
+/* line 37, ../scss/_1030up.scss */
+.the-client-experience .experience3 {
+  top: -33em;
+  left: 660px;
+}
+/* line 41, ../scss/_1030up.scss */
+.the-client-experience .experience4 {
+  top: -32em;
+  left: 660px;
+}
+/* line 45, ../scss/_1030up.scss */
+.the-client-experience .experience5 {
+  padding-top: 5em;
+  left: 352px;
+}
+/* line 49, ../scss/_1030up.scss */
+.the-client-experience .footer {
+  top: -15em;
+}
+
+/*********************
+FATHOM STYLES
+*********************/
+/* line 60, ../scss/_1030up.scss */
+.single-fathom #inner-header.twelvecol, .archive.fathom #inner-header.twelvecol, .archive.tag.fathom #inner-header.twelvecol, .fathom #inner-header.twelvecol {
+  float: none;
+  margin: 0 8.65%;
+  width: 82.87292817100001%;
+}
+/* line 66, ../scss/_1030up.scss */
+.single-fathom .blog_author.fivecol, .archive.fathom .blog_author.fivecol, .archive.tag.fathom .blog_author.fivecol, .fathom .blog_author.fivecol {
+  width: 44%;
+}
+
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

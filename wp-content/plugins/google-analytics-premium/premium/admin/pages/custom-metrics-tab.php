@@ -1,0 +1,1 @@
+<a class="nav-tab" id="custommetrics-tab" href="#top#custommetrics"><?php _e( 'Custom metrics', 'google-analytics-for-wordpress' ); ?></a>

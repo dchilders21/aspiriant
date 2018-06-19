@@ -1,0 +1,679 @@
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+.small-scrn { // small devices
+	display: none;
+}
+.medium-scrn { // medium devices 481up
+	display: none; 	
+}
+.large-scrn { // large devices 768up
+	display: block;
+}
+
+
+.page-title, .archive-title {
+//	margin-bottom: 40px;
+}
+
+.bio-grid {
+	display:block; 
+	height:260px;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap, #content
+// .menu-why-we-are-unusual-container, /* targeting secondary menu items -ewee */
+// .menu-our-exceptional-people-container, 
+// .menu-locations-container, 
+// .menu-our-services-container, 
+// .menu-start-dialogue-container  
+// .menu-news-intel-container
+{
+	max-width: 1140px;
+}
+
+#main {
+	margin: 1em 0 0 0;
+}
+
+
+.attachment-full.wp-post-image, .archive-title+img, .article-header+img {
+	max-width: 100%; /* Constrains hero image width */
+	height: auto;
+}
+.single-bio .attachment-full.wp-post-image {
+	max-width: 675px; /* Constrains bio image width */
+	height: auto;
+}
+
+// Hide elements meant for only mobile display
+.mobile {
+	display: none;
+}
+
+.page-template-page-location-php .threecol {
+	display: block;
+}
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	#logo {
+		position: relative;
+		img {
+			// height: auto;
+			// margin-bottom: 1em;
+			// max-width: 120px;
+		}
+	}
+	.client-login {
+		font-size: 0.8em;
+		padding: 10px;
+		margin-bottom: 3em;
+	}
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+nav {
+	float: right;
+}
+
+.nav, .top-nav, .secondary-nav, .tertiary-nav, .footer-nav {
+	float: right;
+}
+
+
+.nav, .top-nav, .secondary-nav, .tertiary-nav {
+
+	li {
+		font-size: 0.9em;
+
+		a {
+			border-bottom: 0;
+			
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			display: none;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		// &:hover ul {
+		// 	top: auto;
+		// 	display: block;
+		// }
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {}
+	}  // end current highlighters 
+
+} // .nav 
+
+#menu-footer-links {
+	margin: 32px 0 0;
+	.divider {
+		margin-left: 10px;
+	}
+} // .menu-footer-links
+
+.secondary-nav li a, .tertiary-nav li a, .footer-nav li a { /* overwrites .nav */
+	padding: 0 0.6em 0 0;
+}
+
+nav {
+	// #menu-item-91 {
+	// 	display: none;
+	// }
+	#everything-else {
+		float: right;
+	}
+}
+
+.nav.top-nav {
+	margin: 0 0 1em 0;
+
+	li {
+		a {
+			text-transform: uppercase;
+		} // a
+	} // li
+} // .nav.top-nav
+
+
+.secondary-nav {
+	margin-bottom: .25em;
+}
+.tertiary-nav {
+	clear: both;
+	margin-top: 0;
+}
+
+.menu-by-office-container {
+	clear:both;
+}
+
+.by-office {
+	cursor: pointer;
+	&:after {
+		content: "   ▼";
+	}
+}
+#menu-our-exceptional-people .active-trail, #menu-our-exceptional-people li:active {
+.by-office:after {
+		color: $link-active-trail;
+		content: "   ▲";
+	}
+}
+/* link color overrides */
+.secondary-nav a, .secondary-nav a:visited, 
+.client-login a, .client-login a:visited, .tertiary-nav a, .tertiary-nav a:visited {
+	/*color: $link-nav2;*/
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-nav2-hover;
+	}
+
+	/* on click */
+	&:active {
+		color: $link-nav2-hover;
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 1.25em;
+	padding: 1em;
+	margin-left: 5em;
+	width: 122%;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+.threecol.sidebar-container {
+	margin-right: 0;
+	margin-top: 0;						
+	width: 22%;
+}
+
+#sidebar1 {
+	.read-more {
+		padding-bottom: 20px;
+	}
+} // #sidebar1
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/********************
+PAGE SPECIFIC and
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.home {				/* home page */                          
+	.featured {		/* featured news item on home page */
+		margin: 30px auto;
+		h1, .h3, p {
+			font-size: $base-font-size;
+			font-family: $body;
+			line-height: $text-line-height;
+			margin: 0;
+		} // h1, .h3, p
+		h1, .h3 {
+			padding-top: 10px;
+		} // h1, .h3
+		img {
+			float: left;
+			margin-right: 20px;
+		} // img
+	} // .featured
+	.feature-section {
+		border-top: 2px solid #A1B5C1;
+	} // .feature-border
+
+} // .home
+
+.the-client-experience {	/* client experience page */
+	.featured-image {
+		float: left;
+	}
+	.experience1, .experience2, .experience3, .experience4, .experience5 {
+		float: left;
+		margin-left: 360px;
+		position: relative;
+		top: -25em;
+		width: 17em;
+	}
+	.footer {
+		top: -25em;
+	}
+}
+
+.single-bio {
+	h1, h2, h3, h4, h5, h6 {
+//		padding-bottom: 0.5em; // added to all
+	} // h1, h2, h3, h4, h5, h6
+	#bio ul {
+		margin-top: 0;
+	} // ul
+	.sidebar#sidebar1 {
+		margin-top: 28em;
+	} // .sidebar#sidebar1
+} // .single-bio
+
+.bio-grid.threecol {
+	width: 25%;
+}
+
+// gray box placeholder for missing bio thumbnails--better to handle as an actual image
+// .bio-image-medium {
+// 	background: $med-light-gray;
+// 	height: 152px;
+// 	width: 300px;
+// }
+
+/* for the news and intel section */
+.intel-text {
+	margin-left: 230px;
+}
+.parent-pageid-27 article img { // targets all news-intel pages
+	max-width: 170px;
+	height: auto;
+}
+
+.start-dialogue {
+	.sidebar {
+		margin-top: 21em; // lines up sidebar with top of text
+	}
+}
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+/*********************
+FATHOM STYLES
+*********************/
+
+.single-fathom, .archive.fathom, .archive.tag.fathom, .fathom {
+	.header {
+		#inner-header {
+			margin: 0 auto;
+		//	width: 96%;
+		}
+		#hamburger {
+			top: 0;
+		}
+	}
+	.top-nav {
+
+	}
+	#logo {
+
+	}
+	nav {
+		
+	}	
+	.wrap, #content {
+		max-width: 1280px;
+	}
+
+	#main {
+			border: none; 
+			// float: left;
+			margin: 1rem 0 0; 
+			position: relative;
+			max-width: 100%; // for IE
+			min-height: 25rem;
+		}
+	#fathom-sidebar {
+		top: 32rem;
+		&.insight-sidebar {
+			top: 32rem;
+			.fa-2x {
+				font-size: 1.8rem; // overwrites FontAwesome styles per Todd's request
+			}
+		}
+		.sidebar-insight-contents {
+			display: block; // display toc on 768up
+		}
+	}
+	// social links
+	#follow-links, #share-links {
+	    max-width: 2rem;
+	    .fa-2x {
+			font-size: 1.8rem; // overwrites FontAwesome styles per Todd's request
+			padding-bottom: 0.25rem;
+		}
+	}
+	#follow-links {
+		right: 5rem; 
+	    top: 17rem; 
+	}
+
+	#share-links {
+		margin-left: 0.5rem;
+		padding-bottom: 0;
+	}
+
+	.blog_author {
+		// &:last-of-type {
+		// 	float: right;
+		// }
+		// &:first-of-type { // when only one author, they should float left
+		// 	float: left;
+		// }
+		margin: 0 1rem 0 0;
+	}
+
+	// News-Intel items on single posts
+	.fathom-news-intel {
+		.fathom-news-snippet {
+			border-right: 1px solid $fathom-lt-blue;
+			border-bottom: none;
+			clear: none;
+			margin: 0 3% 1.5rem 0;
+			min-height: 15rem; // need for logo positioning
+			padding: 0 3% 0 0;
+			width: 30%;
+			&:last-of-type {
+				border-right: none; 
+			}
+			.news-intel-logo {
+				bottom: 0;
+				max-width: 85%;
+				padding-top: 1.5rem;
+				position: absolute;
+				right: 1rem;
+			}
+		}
+	}
+
+	// Newsletter signup
+	.insight_newsletter_modal {
+	    height: auto;
+	    margin: 0px;
+	    max-width: 25rem;
+	    padding: 0px;
+		width: auto;
+	}
+	.insight_newsletter_modal .insight_newsletter_container {
+		margin: 0;	
+	}
+	.insight_newsletter_signup {
+		margin: 1rem 0 2rem 0.5rem;
+		.insight-icon {
+			float: left;
+			margin: -0.5rem 0.5rem 1rem 0;
+		}
+		.insight-modal-link {
+			clear: left;
+			float: left;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+	}
+	.close-modal {
+		z-index: 1;
+	}
+
+} // END .single-fathom, .archive-fathom
+
+// ARCHIVE and CATEGORY PAGES
+.archive.fathom {
+	#main {
+		top: -5rem; // Fathom home and category landing only
+	}
+	.post-container {
+		// count starts with sticky post?
+		&:nth-last-of-type(2):nth-child(even), // if next to last is even
+		&:last-of-type {
+			border-bottom: none; // removes border for last two items
+		}
+	}
+}
+
+.archive.fathom { // TODO: was .archive.tag.fathom
+	#main {
+		top: 0;
+	}
+}
+
+// STICKY POST
+.archive.fathom .post-container.sticky-post {
+	min-height: 12rem;
+	width: 84%;
+	img {
+		max-width: 48%;
+		margin: 0 3% 3% 0;
+	}
+	&:first-of-type { // don't remove border if next to last is the first item
+		border-bottom: 1px solid $fathom-lt-blue;
+	}
+}
+

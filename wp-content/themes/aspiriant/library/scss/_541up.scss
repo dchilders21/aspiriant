@@ -1,0 +1,75 @@
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: 541px and up
+
+Fathom main nav and hamburger menu collide at 540px
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+.small-scrn { // small devices
+	display: none;
+}
+.medium-scrn { // medium devices was 481up changing to 541up (for Fathom)
+	display: block; 	
+}
+.large-scrn { // large devices 768up
+	display: none;
+}
+
+/*********************
+FATHOM STYLES
+*********************/
+
+.single-fathom, .archive.fathom, .archive.tag.fathom, .fathom {
+	.header { 
+		#searchform {
+			display: block;
+			float: right;
+			position: relative;
+			top: 4rem;
+			label {
+				color: $fathom-lt-blue;
+				float: right;
+				position: relative;
+				right: 1.5rem;
+				top: 0.25rem;
+			}
+			.searchbox {
+				@include border-radius (0.5rem);
+				background: $fathom-blue;
+				border: 1px solid $fathom-lt-blue;
+				color: $med-gray;
+				height: 1.5rem;
+				padding: 0.5rem 0.75rem 0.25rem;
+			}
+		}
+		.top-nav {
+			display: block; // show on 541up
+		}
+		#hamburger {
+			top: 1rem;
+		}
+		nav {
+			top: 1.5rem;
+		}	
+	} // END .header
+
+	#content {
+		margin-top: 4.25em; // to match rest of site
+	}
+
+	.menu-fathom-blog-container .menu li {
+		display:inline;
+		&:before { content:'|'; }
+		&:first-child:before { content:''; }
+	}
+
+} // END .single-fathom, .archive-fathom
+

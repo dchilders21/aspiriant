@@ -1,0 +1,17 @@
+Jun 13 17:03:31 ==DUPLICATOR INSTALLER BOOTSTRAP v3.7.1.2==
+Jun 13 17:03:31 ----------------------------------------------------
+Jun 13 17:03:31 Installer bootstrap start
+Jun 13 17:03:31 Using archive /Users/chnkyfire_pro/Documents/Aspiriant/mamp/20180613_aspirianttheleadingindepende_ea1bf9865031aa7a7211_20180613144531_archive.daf
+Jun 13 17:03:31 Going to overwrite installer directory since either in overwrite mode or installer directory doesn't exist
+Jun 13 17:03:31 Ready to extract the installer
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/api to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/assets to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/classes to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/ctrls to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/lib to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/views to 755<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/archive.cfg to 644<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/index.php to 644<br/>
+Jun 13 17:03:33 Set permissions of /Users/chnkyfire_pro/Documents/Aspiriant/mamp/dup-installer/main.installer.php to 644<br/>
+Jun 13 17:03:33 No detected errors so redirecting to the main installer. Main Installer URI = http://localhost:8888/dup-installer/main.installer.php?archive=%2FUsers%2Fchnkyfire_pro%2FDocuments%2FAspiriant%2Fmamp%2F20180613_aspirianttheleadingindepende_ea1bf9865031aa7a7211_20180613144531_archive.daf&bootloader=installer.php&

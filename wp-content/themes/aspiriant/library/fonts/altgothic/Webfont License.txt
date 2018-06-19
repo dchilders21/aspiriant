@@ -1,0 +1,27 @@
+This Addendum allows for using the Fontspring Web Fonts with the @font-face selector in CSS files for styling HTML web pages and/or ePub publications. 
+
+A. @Font-Face Usage Restrictions for HTML web pages 
+
+You may link the licensed Web Fonts to your HTML web pages using the @font-face selector in CSS with the following restrictions:
+1. You must use the provided web-only version of the licensed font (Web Font). Linking to the full, licensed CFF OpenType font designed for desktop installation is prohibited.
+2. The Web Font must be subset to include only the glyphs necessary for displaying the web site. 
+3. All OpenType features must be removed from the licensed font. 
+4. You must include the commented header showing license and copyright information in the provided CSS file. 
+5. The licensed Web Font may be simultaneously installed on no more than the number of web site domains specified in the receipt you received for the licensed font. 
+6. The Web Font may only be installed on web site domains that are under the direct control of the licensee. 
+
+B. @Font-Face Usage Restrictions for ePub publications 
+
+You may link the licensed Web Fonts to your ePub publications using the @font-face selector in CSS with the following restrictions:
+ 
+1. You must use the provided web-only version of the licensed font (Web Font). Linking to the full, licensed CFF OpenType font designed for desktop installation is prohibited.
+2. The Web Font must be subset to include only the glyphs necessary for viewing the ePub publication. 
+3. All OpenType features must be removed from the licensed font.
+4. You must include the commented header showing license and copyright information in the provided CSS file.
+5. The Web Font may only be linked to ePub publications that are published directly by the licensee. 
+6. Licensee must make reasonable effort to ensure that recipients cannot extract the licensed font (Web Font) or otherwise use it for the editing or creation of new content. 
+7. As specified, the licensed font [Web Font] may be embedded in an unlimited number of ePub publications.
+
+C. Other Web Site/ePub Linking
+
+1. You may not convert or embed the licensed font with any other technology. This includes Javascript methods such as Cufón and Typeface.js.

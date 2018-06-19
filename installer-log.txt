@@ -1,0 +1,203 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 05:03:58
+* VERSION: 3.7.1.2
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PHP:		7.1.8 | SAPI: apache2handler
+PHP MEMORY:	5000M | SUHOSIN: disabled
+SERVER:		Apache/2.2.32 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.1.8 mod_ssl/2.2.32 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0
+DOC ROOT:	/Users/chnkyfire_pro/Documents/Aspiriant/mamp
+DOC ROOT 755:	true
+LOG FILE 644:	true
+REQUEST URL:	http://localhost/dup-installer/main.installer.php?archive=%2FUsers%2Fchnkyfire_pro%2FDocuments%2FAspiriant%2Fmamp%2F20180613_aspirianttheleadingindepende_ea1bf9865031aa7a7211_20180613144531_archive.daf&bootloader=installer.php&
+SAFE MODE :	0
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME:	20180613_aspirianttheleadingindepende_ea1bf9865031aa7a7211_20180613144531_archive.daf
+SIZE:	211MB
+
+>>> DupArchive Extraction Complete
+
+--------------------------------------
+DUPARCHIVE EXTRACTION STATUS
+--------------------------------------
+Archive extracted with no errors.
+
+Resetting permissions
+
+WEB SERVER CONFIGURATION FILE STATUS:
+- .htaccess file was not reset or backed up.
+- .user.ini file was not reset or backed up.
+- web.config file was not reset or backed up.
+
+STEP-1 COMPLETE @ 05:04:01 - RUNTIME: 2.8949 sec.
+
+
+
+********************************************************************************
+* DUPLICATOR PRO INSTALL-LOG
+* STEP-2 START @ 05:05:02
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+
+WARNING: The database script is '41.94MB' in size.  The PHP memory allocation is set
+at '5000M'.  There is a high possibility that the installer script will fail with
+a memory allocation error when trying to load the database.sql file.  It is
+recommended to increase the 'memory_limit' setting in the php.ini config file.
+see: https://snapcreek.com/duplicator/docs/faqs-tech#faq-trouble-056-q 
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.6.35 -- Build Server: 5.6.39
+FILE SIZE:	database.sql (41.94MB) - installer-data.sql (41.94MB)
+TIMEOUT:	28800
+MAXPACK:	4194304
+SQLMODE-GLOBAL:	NO_ENGINE_SUBSTITUTION
+SQLMODE-SESSION:NO_AUTO_VALUE_ON_ZERO
+NEW SQL FILE:	[/Users/chnkyfire_pro/Documents/Aspiriant/mamp/installer-data.sql]
+COLLATE FB:	Off
+DB CHUNKING:	disabled
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+
+NOTICE: This servers version [5.6.35] is less than the build version [5.6.39].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+Starting Cleanup Routine...
+Cleanup Routine Complete
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	286
+
+wp_commentmeta: (44)
+wp_comments: (14)
+wp_duplicator_packages: (2)
+wp_duplicator_pro_entities: (6)
+wp_duplicator_pro_packages: (0)
+wp_filemeta: (0)
+wp_formmaker: (9)
+wp_formmaker_backup: (1)
+wp_formmaker_blocked: (0)
+wp_formmaker_query: (0)
+wp_formmaker_sessions: (0)
+wp_formmaker_submits: (0)
+wp_formmaker_themes: (37)
+wp_formmaker_views: (0)
+wp_links: (0)
+wp_options: (395)
+wp_postmeta: (12339)
+wp_posts: (6241)
+wp_term_relationships: (2063)
+wp_term_taxonomy: (544)
+wp_termmeta: (2)
+wp_terms: (544)
+wp_usermeta: (442)
+wp_users: (14)
+wp_yoast_seo_links: (72)
+wp_yoast_seo_meta: (184)
+Removed '60' cache/transient rows
+
+INSERT DATA RUNTIME: 6.8457 sec.
+STEP-2 COMPLETE @ 05:05:08 - RUNTIME: 6.8715 sec.
+
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 05:05:17
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	utf8
+CHARSET CLIENT:	utf8
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+Subsite id=-1
+wp_commentmeta~ (44)
+wp_comments~ (14)
+wp_duplicator_packages~ (2)
+wp_duplicator_pro_entities~ (6)
+wp_duplicator_pro_packages^ (0)
+wp_filemeta^ (0)
+wp_formmaker~ (9)
+wp_formmaker_backup~ (1)
+wp_formmaker_blocked^ (0)
+wp_formmaker_query^ (0)
+wp_formmaker_sessions^ (0)
+wp_formmaker_submits^ (0)
+wp_formmaker_themes~ (37)
+wp_formmaker_views^ (0)
+wp_links^ (0)
+wp_options~ (395)
+wp_postmeta~ (12339)
+wp_posts~ (6241)
+wp_term_relationships~ (2063)
+wp_term_taxonomy~ (544)
+wp_termmeta~ (2)
+wp_terms~ (544)
+wp_usermeta~ (442)
+wp_users~ (14)
+wp_yoast_seo_links~ (72)
+wp_yoast_seo_meta~ (184)
+--------------------------------------
+Search1:	'/home/aspwwwtech/public_html/wp' 
+Change1:	'/Users/chnkyfire_pro/Documents/Aspiriant/mamp' 
+Search2:	'\/home\/aspwwwtech\/public_html\/wp' 
+Change2:	'\/Users\/chnkyfire_pro\/Documents\/Aspiriant\/mamp' 
+Search3:	'%2Fhome%2Faspwwwtech%2Fpublic_html%2Fwp%2F' 
+Change3:	'%2FUsers%2Fchnkyfire_pro%2FDocuments%2FAspiriant%2Fmamp%2F' 
+Search4:	'\home\aspwwwtech\public_html\wp' 
+Change4:	'/Users/chnkyfire_pro/Documents/Aspiriant/mamp' 
+Search5:	'//aspiriant.com/wp' 
+Change5:	'//localhost:8888' 
+Search6:	'\/\/aspiriant.com\/wp' 
+Change6:	'\/\/localhost:8888' 
+Search7:	'%2F%2Faspiriant.com%2Fwp' 
+Change7:	'%2F%2Flocalhost%3A8888' 
+SCANNED:	Tables:26 	|	 Rows:22953 	|	 Cells:210104 
+UPDATED:	Tables:1 	|	 Rows:3782 	|	 Cells:4483 
+ERRORS:		0 
+RUNTIME:	7.669600 sec
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG ARK FILE:
+ - '/Users/chnkyfire_pro/Documents/Aspiriant/mamp/wp-config-arc.txt'
+
+Reseted original .htaccess content from htaccess.orig
+
+WEB SERVER CONFIGURATION FILE UPDATED:
+- Preparing .htaccess file with basic setup.
+- Successfully updated the .htaccess file setting.
+
+====================================
+GENERAL UPDATES & CLEANUP:
+====================================
+
+- Removed '0' schedule storage items
+
+====================================
+NOTICES
+====================================
+
+WP-CONFIG NOTICE: The wp-config.php has following values set [WPCACHEHOME, WP_SITEURL, WP_HOME].  
+Please validate these values are correct by opening the file and checking the values.
+See the codex link for more details: https://codex.wordpress.org/Editing_wp-config.php
+
+STEP-3 COMPLETE @ 05:05:25 - RUNTIME: 7.6890 sec. 
+
+

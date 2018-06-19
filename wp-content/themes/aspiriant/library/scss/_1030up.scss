@@ -1,0 +1,72 @@
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+
+.the-client-experience {	/* client experience page */
+// all this absolute positioning gives me the willies... 
+	.featured-image {
+		float: left;
+		position: absolute; 
+		left: 310px; 
+		top: -60px; 
+		.tagline {
+			margin: 0 auto;
+			position: relative; 
+			width: 200px; 
+		}
+	}
+	.experience1, .experience2, .experience3, .experience4, .experience5 {
+		float: none;
+		margin-left: 0;
+		position: relative;
+		top: 0;
+	}
+	.experience1 {
+		padding-top: 0;
+	}
+	.experience2 {
+		padding-top: 3em;
+	}
+	.experience3 {
+		top: -33em; 
+		left: 660px;
+	}
+	.experience4 {
+		top: -32em; 
+		left: 660px;
+	}
+	.experience5 {
+		padding-top: 5em; 
+		left: 352px;
+	}
+	.footer {
+		top: -15em;
+	}
+}
+
+/*********************
+FATHOM STYLES
+*********************/
+
+.single-fathom, .archive.fathom, .archive.tag.fathom, .fathom {
+
+	#inner-header.twelvecol { // on the largest screens, treat the 12col like 10col
+		float: none;
+		margin: 0 8.65%;
+		width: 82.87292817100001%;
+	}
+	.blog_author {
+		&.fivecol { // grid override
+			width: 44%;
+		}
+	}
+	
+}
+

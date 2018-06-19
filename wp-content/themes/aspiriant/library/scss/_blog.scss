@@ -1,0 +1,577 @@
+/******************************************************************
+Site Name: Aspiriant.com
+Author: Dogmo Studios (@cchanse, @intrinsi, @ewee)
+
+Stylesheet: Fathom Blog Stylesheet
+
+******************************************************************/
+
+.single-fathom, .archive.fathom, .archive.tag.fathom, .fathom, .page-template-page-fathom { // targets blog by body class
+	font-family: $body;
+
+	/*********************
+	 GENERAL STYLES
+	*********************/
+
+	div, button, input, select, textarea, p, ul, ol, li {
+		color: $gray;
+		font-family: $body;
+		font-size: 0.944rem; // 17px
+		line-height: 1.22rem; // 22px
+	}
+	i {
+		font-family: $blog-ital;
+		font-style: $normal;
+		&.fa {
+			font-family: 'FontAwesome';
+		}
+	}
+	b, strong {font-family: $blog-bold;}
+	.light {font-family: $blog-light;}
+	.ultralight {font-family: $blog-ultralight;}
+	.intro-bullets {
+		border-bottom: 1px solid $fathom-lt-blue;
+		// border-top: 1px solid $fathom-lt-blue;
+		clear: both;
+		padding: 0 0 0.25rem;
+		li {
+			color: $fathom-blue;
+			font-size: 1.17rem; // 21px
+			line-height: 1.38rem; // 25px
+			list-style: none;
+			padding: 0 0 1rem 0;
+			&:before {
+				content: '\2022'; // round bullet
+				display: block;
+				position: relative;
+				max-width: 0;
+				max-height: 0;
+				left: -1.25rem;
+				top: 0;
+				color: $fathom-lt-blue;
+				font-size: 1rem;
+			}
+		}
+	}
+	ul, ol {
+		margin: 0.5em 0 1em; 
+	}
+	.ml-responsive-table {
+		dd, dt {
+			color: $fathom-blue;
+		}
+		dd {
+			font-family: $blog-light;
+			font-weight: $light;
+		}
+		dt {
+			font-family: $blog-bold;
+			font-weight: $bold;
+			text-transform: uppercase;
+		}
+		.ml-grid {
+			border-bottom: 0;
+			border-top: 1px solid $fathom-lt-blue;
+			float: left;
+			max-width: 33%;
+			min-height: 31rem;
+		}
+	}
+	blockquote, .pullquote {
+		margin: 1.2rem 0; // 18px top/bottom margin
+		p {
+			border-bottom: 1px solid $orange;
+			border-top: 1px solid $orange;
+			color: $fathom-blue;
+			font-family: $blog-light;
+			font-size: 1.67rem; // 30px
+			line-height: 2.2rem; // 33px
+			margin: 0;
+			padding: 1.83rem; // 22px-ish
+			text-align: center;
+		}
+	}
+	#container {
+		border-bottom: 1px solid $fathom-lt-blue;
+		margin: 0 0 3rem 0;
+	}
+	#content {
+		margin-top: 0; // moves content up on smallest devices
+	}
+	.post_tags {
+		clear: both;
+		padding-top: 2rem;
+	}
+	.post_meta {
+		margin-bottom: 0.5rem; 
+	}
+	.post_category, .post_date {
+		a { color: $fathom-blue; }
+		color: $fathom-blue;
+		font-size: 0.722rem;
+		text-transform: uppercase;
+	}
+	.post_date {
+		float: right;
+		text-align: right;
+	}
+	.header {
+		background: $fathom-blue;
+		border-bottom: 1.5rem solid $fathom-lt-blue;
+		margin: 0;
+		width: 100%;
+		#inner-header {
+			border-bottom: 0;
+		}
+		#logo {
+			display: inline-block;
+			margin: 0;
+			position: relative;
+			top: 1.45rem;
+			img {
+				height: auto;
+				// margin-bottom: 1.125rem; // TODO: breaks at 453px -@ewee
+				max-width: 250px;
+				margin-bottom: 0;
+			}
+		}
+		#searchform {
+			display: none;
+		}
+		#hamburger {
+			float: right;
+			position: absolute;
+			right: 1rem;
+			top: 0;
+			#icon {
+				float: right;
+				font-size: 2rem;
+				position: relative;
+				a, a:hover, a:active, a:visited {
+					color: $orange;
+				}
+				.hamburger-menu-link {
+					display: block;
+					height: 1.75rem;
+					width: 1.75rem;
+					&:before {
+					    background: $orange;
+					    box-shadow: 0 0.2em 0 0 $orange, 0 0.4em 0 0 $orange;
+						content: "";
+					    height: 0.2rem;
+					    width: 1.75rem;
+					    position: absolute;
+					    left: 0;
+					    top: 0.75rem;
+					}
+					&:focus, &:hover, &:active {
+						@include opacity (0.8);
+						color: $link-hover;
+					}
+				}
+			}
+			#menu {
+				display: none;
+				background-color: $fathom-blue;
+				clear: both;
+				float: right;
+				position: relative;
+				top: 0.25rem;
+				z-index: 1;
+				div, li {
+					color: $white;
+					font-size: $blog-nav;
+					margin: 0;
+					padding: 0;
+					a, a:hover, a:active, a:visited {
+						color: $white;
+					}
+				}
+				div {
+					border: solid 1px $fathom-lt-blue;
+					padding: 0.5rem 1rem;
+					&.menu-item, &.menu-fathom-blog-container {
+						border: 0;
+						padding: 0;
+					}
+				}
+				#menu-fathom-blog-2 {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li {
+						border: solid 1px $fathom-lt-blue;
+						padding: 0.5rem 1rem;
+					}		
+				}
+			}
+
+		}
+	} // END .header
+
+	/******************************************************************
+	 H1, H2, H3, H4, H5 STYLES
+	******************************************************************/
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	 	color: $fathom-blue;
+	 	font-family: $blog-light;
+	 	a {
+	 		color: $fathom-blue;
+	 		font-family: inherit;
+	 	}
+	}
+	h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+ 		padding-top: 0.5em; // per client request
+	}
+	h1, .h1 {
+		font-size: 2.5rem; // 45px
+		line-height: 2.66rem; // 48px
+	}
+	h2, .h2 {
+		font-family: $blog-reg;
+		font-size: 1.33rem; // 24px was 30px
+		line-height: 1.66rem; // 30px was 36px
+	}
+	h3, .h3 {
+		font-family: $blog-bold;
+		font-size: 1rem; // 18px
+		line-height: 1.17rem; // 21px
+	}
+	h4, .h4 {
+		font-size: 1rem; // 18px
+		line-height: 1.17rem; // 21px
+	}
+
+	/*********************
+	 NAVIGATION STYLES
+	*********************/
+	nav {
+		float: none;
+		position: relative;
+		top: 0.75rem;
+	}
+	.top-nav {
+		display: none; // hide on small devices
+		float: left;
+	}
+	.nav.top-nav, .secondary-nav, .tertiary-nav {
+		li a {
+			font-family: $blog-reg;
+			font-size: $blog-nav;
+			font-weight: $normal;
+			text-transform: none;
+		}
+	}
+	.back-to-top {
+		clear: both;
+		text-align: right;
+		padding: 1rem 0.5rem;
+		a {
+			&:after {
+				content: ' \25b2';
+			}
+		}
+	}
+	.pagination {
+		border-top: 1px solid $fathom-lt-blue;
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		a {
+			color: $orange;
+		}
+		.sixcol {
+			margin: 0;
+		}
+	}
+
+	#main {
+			// border-bottom: 1px solid $fathom-lt-blue;
+			// margin: 2rem 0; 
+		}
+	
+	// Fathom blog author info
+	.blog_author {
+		font-size: 0.944rem; // 17px
+		line-height: 1.11rem; // 20px
+		margin: 2rem 0; 
+		min-height: 5rem;
+		padding: 0 0 0.5rem 0;
+		&.fivecol {
+			width: 100%;
+		}
+	}
+	.blog_img {
+		@include border-radius(2rem, 2rem);
+		background-size: 4rem !important;
+		float: left;
+		height: 4rem;
+		margin: 0 1rem 0 0;
+		width: 4rem;
+	}
+
+	// social links
+	#follow-links, #share-links {
+		clear: left;
+		display: block;
+	    position: relative;
+	    z-index: 1;
+	}
+	#follow-links {
+		float: right;
+	}
+	#share-links {
+		float: left;
+		margin: 1rem 0 0 0;
+	    padding-bottom: 1rem;
+	}
+
+	// News-Intel items on single posts
+	.fathom-news-intel {
+		border-top: 1px solid $fathom-lt-blue;
+		padding-top: 1.5rem;
+		position: relative; // need this to absolutely position logo
+		.fathom-news-snippet {
+			border-bottom: 1px solid $fathom-lt-blue;
+			clear: both;
+			display: block;
+			padding: 2rem 0 6rem 0;
+			h2 {
+				font-family: $blog-light;
+				font-size: 1.22rem; // 22px
+				line-height: 1.33rem; // 24px
+			}
+			&:last-of-type {
+				border-bottom: none; 
+			}
+			.featured-person {
+			    clear: both;
+			    color: $gray;
+			    display: block;
+			    font-size: $h6-font-size;
+			    font-weight: $light;
+			    line-height: $text-line-height;
+			    padding-top: 1rem;
+			    text-align: left;
+			    text-transform: capitalize;
+			}	
+		}
+	}
+
+	// Newsletter signup at bottom of single posts
+	.insight_newsletter_container {
+		background: $white;
+		border: 1px solid $fathom-lt-blue;
+		margin: 2rem 0 4rem;
+		position: relative;
+		z-index: 1;
+		.newsletter-hed {
+		    background: $fathom-blue;
+		    clear: both;
+		    color: $white;
+		    margin: 0 auto 1rem auto;
+		    padding: 1rem;
+		    text-align: left;
+		    vertical-align: middle;
+	    }
+	    .newsletter-content {
+	    	padding: 0 1rem 1rem;
+	        p {
+		    	color: $fathom-blue;
+		    }
+		    form {
+		    	margin: 0 auto; 
+		    	text-align: center;
+		    }
+	    }
+	    .insight-form-submit {
+	    	@include border-radius(0.5rem, 0.5rem);
+	    	background: $fathom-orange;
+	    	color: $white;
+	    	font-size: 0.75rem;
+		    padding: 0.25rem 0.5rem 0.125rem 0.5rem;
+	    	text-align: center;	
+	    }
+	    .text-field {
+    		@include border-radius(0.25rem, 0.25rem);
+    		padding: 0.25rem;
+    		margin: 0.5rem;
+    		width: 90%;
+    		max-width: 36rem;
+	    }
+	}
+	.footnotes {
+		ol {
+			margin-top: 1.5rem;
+		}
+		ol:before {
+			color: $fathom-blue;
+			content: 'Footnotes';
+			font-family: $blog-bold;
+			font-size: 1rem; // matches blog h3
+			font-weight: $normal;
+			line-height: 1.17rem; // matches blog h3
+			margin-left: -1rem;
+		}
+		li {
+			font-size: 0.65rem;
+			line-height: 0.78rem; 
+			margin: 0.5rem 0; 
+		}
+	}
+	.source { // matches .footnotes li
+		font-size: 0.65rem;
+		line-height: 0.78rem; 
+		margin: 0.5rem 0;
+	}
+
+} // END .single-fathom, .archive-fathom
+
+
+/*********************
+ ARCHIVE STYLES
+*********************/
+
+.archive.fathom, .archive.tag.fathom {
+	.post-container {
+		border-bottom: 1px solid $fathom-lt-blue;
+		margin-bottom: 1.5rem;
+		min-height: 26rem;
+		padding-bottom: 1.5rem;
+		&:last-of-type {
+			border-bottom: none; // removes border for last item
+		}
+	}
+	.byline {
+		color: $fathom-blue;
+		font-family: $blog-reg;
+		margin: 0 0 0.5rem 0;
+	}
+	h3, .h2 { 
+		font-family: $blog-light;
+		padding: 0.5rem 0;
+	}
+	.search-title {
+		font-family: $blog-bold;
+	}	
+	p {
+		font-size: $blog-nav;
+	}
+} // END archive styles
+
+// STICKY POST
+.archive.fathom .post-container.sticky-post {
+	width: 100%;
+	.article-header {
+		.post_meta {
+			display: none; // don't show category or date above sticky post
+		}
+		img {
+			float: left;
+			height: auto;
+			width: 100%; 
+			margin: 0 3% 3% 0;
+		}
+		.byline { // comps remove byline from sticky item
+			display: none;
+		}
+		h3, .h2 {
+			font-size: 3.33rem; // 60px
+			line-height: 3.5rem; // 64px
+			padding: 0;
+		}
+
+	}
+	.entry-content {
+		p {
+			color: $fathom-blue;
+			font-size: 1.33rem; // comp 24px
+			line-height: 1.55rem; // comp 28px
+		}
+	}
+} // END sticky post
+
+// Single post template
+.single-fathom {
+	.entry-content {
+		img {
+		//	width: 100%; // breaks images in posts
+		}
+		& > p:first-of-type { 
+			margin-top: 1.25rem;
+		}
+		.author-container {
+			border-bottom: 1px solid $fathom-lt-blue;
+			float: left;
+			margin-bottom: 1.25rem;
+			width: 100%;
+		}
+	}
+}
+
+
+// SIDEBAR 
+#fathom-sidebar {
+	position: relative;
+	margin-top: 2rem;
+	h2 {
+		font-size: 0.833rem; // 15px
+		line-height: 1rem;
+		padding: 0;
+		text-transform: uppercase;
+	}
+	ul {
+		margin-bottom: 2rem;
+		li {
+			font-size: 0.833rem; // 15px
+			line-height: 1.055rem; // 19px
+			list-style: none;
+			margin-bottom: 0.5rem;
+			&:before {
+				/* For a round bullet */
+				content: '\2022';
+				/* For a square bullet */
+				/*content:'\25A0';*/
+				/* For downward triangle */
+				/* content: '\25bc';*/
+				display: block;
+				position: relative;
+				max-width: 0;
+				max-height: 0;
+				left: -0.75rem;
+				top: 0;
+				color: $orange;
+				font-size: 0.833rem;
+			}
+			a {
+				color: $gray;
+			}
+		}
+	}
+	.sidebar-insight-contents {
+		display: none; // don't display toc on <768px
+		.insight_contents {
+			li:before {
+				content: '\25bc';
+				font-size: 0.5rem;
+			}
+		}
+	}
+} // END #fathom-sidebar
+
+// Search return page, Tag return page
+.search, .search-results, .archive.tag.fathom {
+	article {
+		border-bottom: 1px solid $fathom-lt-blue;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+		&:last-of-type {
+			border-bottom: none;
+		}
+		.search-title, .byline {
+			margin: 0;
+			padding-bottom: 0.5rem;
+		}
+	}
+}
+
